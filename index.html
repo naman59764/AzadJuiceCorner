@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Fresh fruit juices, shakes and cold coffee squeezed to order at Azad Juice Corner, opposite Amity University, Mohali.">
+<meta name="theme-color" content="#2b1b3d">
+<title>Azad Juice Corner | Fresh Juice & Shakes in Mohali</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f1ff;--surface:#fff;--ink:#2b1b3d;--muted:#6b5a80;--line:#ddd3ee;--btn:#2b1b3d;--btn-ink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1126;--surface:#261837;--ink:#f5eefc;--muted:#b7a6cc;--line:#3a2a50;--btn:#ffb627;--btn-ink:#2b1b3d}}
+:root[data-theme="dark"]{--bg:#1a1126;--surface:#261837;--ink:#f5eefc;--muted:#b7a6cc;--line:#3a2a50;--btn:#ffb627;--btn-ink:#2b1b3d}
+html{scroll-padding-top:110px}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Outfit,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit}button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;padding:10px 0 0;background:var(--bg)}
+.pill{display:flex;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:8px 8px 8px 20px}
+.logo{font:800 20px Fraunces,serif;text-decoration:none}
+.cartbtn{background:var(--btn);color:var(--btn-ink);border:0;border-radius:99px;padding:8px 18px;font-weight:600}
+.links{display:flex;gap:22px;overflow-x:auto;padding:10px 4px;scrollbar-width:none}
+.links a{text-decoration:none;color:var(--muted);font-weight:500;white-space:nowrap;padding-bottom:2px;border-bottom:3px solid transparent}
+.links a[aria-current="page"]{color:var(--ink);border-color:var(--ink)}
+.btn{display:inline-block;background:var(--btn);color:var(--btn-ink);border:0;border-radius:99px;padding:13px 26px;font-weight:600;text-decoration:none}
+.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:30px 0 50px}
+.hero h1{font-size:clamp(44px,8.5vw,84px);font-weight:800}
+.hero p{max-width:32ch;color:var(--muted);font-size:19px;margin:16px 0 22px}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+.stage{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sun{width:min(74vw,320px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;transition:background .5s;color:#2b1b3d}
+.sun span{font-size:clamp(110px,24vw,160px);line-height:1;transition:transform .35s}
+.sun span.pop{transform:scale(1.18) rotate(-8deg)}
+.pick{display:flex;gap:10px}
+.pick button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);font-size:23px;padding:0}
+.pick button[aria-pressed="true"]{border:3px solid var(--ink)}
+.cap{text-align:center;min-height:56px}.cap b{font:800 24px Fraunces,serif;display:block}.cap span{color:var(--muted)}
+section{padding:40px 0}
+h1.pg{font-size:clamp(38px,7vw,62px);font-weight:800}
+h2{font-size:clamp(30px,5vw,44px);font-weight:800}
+.sub{color:var(--muted);margin:10px 0 24px;max-width:50ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:22px}
+.card h3{font-size:24px;margin-bottom:6px}.card p{margin:0;color:var(--muted);font-size:15px}
+.card b{display:block;margin-top:10px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tile{border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:4px;color:#2b1b3d;background:var(--c)}
+.tile .e{font-size:52px;line-height:1.1}.tile h3{font-size:23px;font-weight:600}
+.tile p{margin:0;flex:1;font-size:15px;opacity:.8}
+.tile .row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.tile .price{font:800 22px Fraunces,serif}
+.add{width:44px;height:44px;border-radius:50%;border:0;background:#2b1b3d;color:#fff;font-size:24px;line-height:1;padding:0}
+.grp{margin:26px 0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--surface);color:var(--ink);border:1.5px solid var(--line);border-radius:99px;padding:7px 16px;font-weight:500}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+textarea{width:100%;border:1.5px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);font:inherit;padding:12px;min-height:70px}
+.sel{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:20px;margin-top:22px}
+.sel h3{font-size:26px}
+.post{display:grid;grid-template-columns:130px 1fr;gap:6px 24px;padding:24px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.post time{color:var(--muted);padding-top:6px}.post h3{font-size:clamp(24px,4vw,32px);font-weight:600}
+.post p{margin:6px 0 0;color:var(--muted)}
+.art{max-width:660px}.art h2{font-size:28px;margin:30px 0 8px}.art p{margin:0 0 14px}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.gal div{border-radius:28px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--c);color:#2b1b3d;font-weight:600}
+.gal span{font-size:64px}
+.panel{background:#2b1b3d;color:#f5eefc;border-radius:36px;padding:clamp(26px,5vw,52px);margin-top:20px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .panel{background:#3a2552}}
+.panel p{color:#d9cbeb;margin:8px 0}.panel .btn{background:#ffb627;color:#2b1b3d}.panel .ghost{background:transparent;color:#f5eefc;border:1.5px solid #f5eefc}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:20px}
+.info div{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:20px}.info b{display:block;font:800 20px Fraunces,serif;margin-bottom:4px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+dialog{border:0;border-radius:28px;background:var(--surface);color:var(--ink);width:min(440px,92vw);padding:24px}
+dialog::backdrop{background:rgba(20,8,32,.6)}
+.line{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.line small{color:var(--muted)}
+.q{white-space:nowrap}.q button{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+.orow{display:flex;justify-content:space-between;align-items:center;margin-top:14px;gap:10px}
+input.nm{width:100%;border:1.5px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);font:inherit;padding:10px 12px;margin-top:12px}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,80px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:600;transition:transform .3s;z-index:40}
+#toast.on{transform:translate(-50%,0)}
+@media (max-width:720px){.hero{grid-template-columns:1fr}.post{grid-template-columns:1fr}.post time{padding:0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="pill"><a class="logo" href="#/home">Azad Juice Corner</a><button class="cartbtn" id="cartBtn" aria-label="Open your order">Order (<span id="count">0</span>)</button></div>
+<nav class="links" id="links" aria-label="Main"><a href="#/home">Home</a><a href="#/menu">Menu</a><a href="#/build">Build your drink</a><a href="#/blog">Blog</a><a href="#/about">About</a><a href="#/gallery">Gallery</a><a href="#/contact">Contact</a></nav>
+</div></header>
+<main class="wrap" id="view"></main>
+<footer>Azad Juice Corner · <span id="addr"></span><br>© <span id="yr"></span> Azad Juice Corner. Made fresh daily.</footer>
+<div id="toast" role="status"></div>
+<dialog id="dlg">
+<h2 style="font-size:32px">Your order</h2>
+<div id="lines"></div>
+<div class="orow"><b>Total</b><b id="total">0</b></div>
+<input class="nm" id="cname" placeholder="Your name (optional)" aria-label="Your name">
+<div class="orow"><button class="btn" id="send" style="background:#128c4a;color:#fff">Send on WhatsApp</button><button id="close" style="background:none;border:0;color:var(--muted)">Close</button></div>
+</dialog>
+<script>
+var WA="919872959764",PHONE="9872959764",CUR="₹",HOURS="Every day, 9:00 am to 6:00 pm",ADDR="Opposite Gate No. 2, Amity University, Mohali",
+MAP="https://www.google.com/maps/search/?api=1&query=Amity+University+Mohali+Gate+2";
+var FR=[{n:"Mango",e:"🥭",c:"#ffb627",t:"Sweet and thick, best in summer"},{n:"Orange",e:"🍊",c:"#ff8a4c",t:"Squeezed to order"},{n:"Watermelon",e:"🍉",c:"#ff7f98",t:"Cold, light and hydrating"},{n:"Pomegranate",e:"🍎",c:"#f06292",t:"Hand-pressed, never from concentrate"},{n:"Sugarcane",e:"🌿",c:"#b7e05a",t:"With ginger and lemon"}];
+var JC="#ffb38a",SC="#ffd27a",HC="#c9e88a";
+var M=[
+{n:"Orange Juice",e:"🍊",g:"Fresh juices",p:60,c:JC,d:"Sweet, tangy and squeezed to order."},
+{n:"Watermelon Juice",e:"🍉",g:"Fresh juices",p:50,c:JC,d:"Cool, juicy and naturally sweet."},
+{n:"Pomegranate Juice",e:"🍎",g:"Fresh juices",p:100,c:JC,d:"Ruby red, hand-pressed."},
+{n:"Sugarcane",e:"🌿",g:"Fresh juices",p:40,c:JC,d:"Pressed with ginger and lemon."},
+{n:"Mix Fruit Juice",e:"🍍",g:"Fresh juices",p:80,c:JC,d:"A fruity blend of the day’s best."},
+{n:"Carrot Beet",e:"🥕",g:"Fresh juices",p:70,c:HC,d:"Carrot, beetroot and a little ginger."},
+{n:"Green Glow",e:"🥬",g:"Fresh juices",p:80,c:HC,d:"Spinach, cucumber, apple, lemon."},
+{n:"Mango Shake",e:"🥭",g:"Shakes and cold coffee",p:90,c:SC,d:"Thick, sweet and sunny."},
+{n:"Banana Shake",e:"🍌",g:"Shakes and cold coffee",p:70,c:SC,d:"Smooth and filling."},
+{n:"Strawberry Shake",e:"🍓",g:"Shakes and cold coffee",p:90,c:SC,d:"Pink, fruity and cool."},
+{n:"Chocolate Shake",e:"🍫",g:"Shakes and cold coffee",p:90,c:SC,d:"Rich cocoa in a glass."},
+{n:"Cold Coffee",e:"☕",g:"Shakes and cold coffee",p:80,c:SC,d:"Chilled, creamy and strong."}];
+var FAV=[3,2,7,9];
+var $=function(i){return document.getElementById(i)},cart=[],B={i:null,s:"Regular",ice:"Regular",note:""},FI=0;
+function tile(i){var m=M[i];return '<div class="tile" style="--c:'+m.c+'"><div class="e">'+m.e+'</div><h3>'+m.n+'</h3><p>'+m.d+'</p><div class="row"><span class="price">'+CUR+m.p+'</span><button class="add" data-add="'+i+'" aria-label="Add '+m.n+'">+</button></div></div>'}
+function chips(a,attr,cur){return a.map(function(x,i){return '<button class="chip" '+attr+'="'+i+'" aria-pressed="'+(cur===i)+'">'+x+'</button>'}).join("")}
+var SG=["Regular","Less sugar","No sugar"],IC=["Regular","Less ice","No ice"];
+var POSTS=[
+{id:"fresh",t:"Why fresh-pressed beats the packet",d:"Oct 12, 2026",s:"Packaged juice often sits for weeks. Ours is pressed minutes before you drink it.",b:"<p>Heat and storage reduce the vitamin C in juice over time, and many packs add sugar or concentrate. At the corner we press each glass to order, so the colour and flavour you see is the fruit itself.</p><h2>Ask for it your way</h2><p>If you like it sweeter, ask us to add a little honey instead of sugar. If you like it colder, ask for extra ice. You can also set sugar and ice yourself on the Build your drink page.</p><h2>A note on water</h2><p>Juice is a treat, not a replacement for water. Keep a bottle with you and enjoy a glass in between.</p>"},
+{id:"whole",t:"Juice or whole fruit?",d:"Sep 28, 2026",s:"Juice is a good treat, but whole fruit keeps the fibre. Here is how we think about it.",b:"<p>Fibre slows how fast sugar reaches your blood, so whole fruit is the steadier choice. Juice still gives you vitamins and hydration.</p><h2>A sensible habit</h2><p>One small glass with a meal or between classes works well for most people. If you want the fibre, ask for a mixed fruit option or eat a whole fruit on the side.</p><h2>Pick by mood</h2><p>Citrus for something sharp, mango or banana for something creamy, sugarcane for something cooling. There is no single best drink, only the one you enjoy.</p>"}];
+var V={
+home:function(){return '<div class="hero"><div><h1>Juice that tastes like the fruit.</h1><p>Pressed fresh at the corner opposite Amity’s Gate 2. Pick a fruit and see what’s in the glass today.</p><div class="acts"><a class="btn" href="#/menu">Order now</a><a class="btn ghost" href="#/build">Build your drink</a><a class="btn ghost" target="_blank" rel="noopener" href="'+MAP+'">Get directions</a></div></div><div class="stage"><div class="sun" id="sun"><span id="emoji" aria-hidden="true"></span></div><div class="pick" id="picker" role="group" aria-label="Pick a fruit">'+FR.map(function(f,i){return '<button data-f="'+i+'" aria-label="'+f.n+'">'+f.e+'</button>'}).join("")+'</div><div class="cap"><b id="fname"></b><span id="fnote"></span></div></div></div>'
++'<section><h2>Explore</h2><div class="cards" style="margin-top:20px"><a class="card" href="#/menu"><h3>Our menu</h3><p>Juices, shakes and cold coffee.</p><b>See the drinks →</b></a><a class="card" href="#/build"><h3>Build your drink</h3><p>Pick a flavour, set sugar and ice.</p><b>Start building →</b></a><a class="card" href="#/about"><h3>About us</h3><p>The story of the stall at Amity’s gate.</p><b>Read our story →</b></a><a class="card" href="#/blog"><h3>Blog</h3><p>Short reads on fruit and health.</p><b>Read the blog →</b></a><a class="card" href="#/gallery"><h3>Gallery</h3><p>Fresh fruit and cold glasses.</p><b>See the photos →</b></a><a class="card" href="#/contact"><h3>Find us</h3><p>Address, timings and WhatsApp.</p><b>Visit us →</b></a></div></section>'
++'<section><h2>Fan favourites</h2><div class="grid" style="margin-top:20px">'+FAV.map(tile).join("")+'</div><p style="margin-top:20px"><a class="btn" href="#/menu">See the full menu</a></p></section>'
++'<section><div class="panel"><h2>Make it yours</h2><p>Pick a flavour, choose your sugar and ice, then add it to your order.</p><p><a class="btn" href="#/build">Build your drink</a></p></div></section>'},
+menu:function(){var gs=[];M.forEach(function(m){if(gs.indexOf(m.g)<0)gs.push(m.g)});
+return '<section><h1 class="pg">Freshly made, every glass</h1><p class="sub">Tap + to add a drink to your order, then send it on WhatsApp.</p>'+gs.map(function(g){return '<h2 class="grp" style="font-size:30px">'+g+'</h2><div class="grid">'+M.map(function(m,i){return m.g===g?tile(i):""}).join("")+'</div>'}).join("")+'</section>'},
+build:function(){var m=B.i===null?null:M[B.i];
+return '<section><h1 class="pg">Build your drink</h1><p class="sub">Pick a flavour, set the sugar and ice, and add it to your order.</p><h3 class="grp">1. Pick your drink</h3><div class="chips">'+chips(M.map(function(x){return x.e+" "+x.n}),"data-b",B.i)+'</div><h3 class="grp">2. Sugar</h3><div class="chips">'+chips(SG,"data-s",SG.indexOf(B.s))+'</div><h3 class="grp">3. Ice</h3><div class="chips">'+chips(IC,"data-ice",IC.indexOf(B.ice))+'</div><h3 class="grp">Anything else? (optional)</h3><textarea id="note" aria-label="Notes" placeholder="Extra fruit, no pulp, less milk">'+B.note.replace(/</g,"&lt;")+'</textarea><div class="sel">'+(m?'<h3>'+m.e+' '+m.n+'</h3><p style="margin:4px 0 14px;color:var(--muted)">'+B.s+' · '+B.ice+' · '+CUR+m.p+'</p><button class="btn" data-badd="1">Add to order</button> ':'<h3>Pick a drink to begin</h3><p style="margin:4px 0 14px;color:var(--muted)">Choose a flavour, then set sugar and ice.</p>')+'<button class="btn ghost" data-sur="1">Surprise me</button></div></section>'},
+about:function(){return '<section class="art"><h1 class="pg">A regular stop at Amity’s gate</h1><p class="sub">Right opposite Gate 2, Azad Juice Corner is where you stop for a cold glass between classes.</p><h2>Our story</h2><p>We are a small juice corner with a simple idea: serve real fruit, made in front of you. Fresh juice, thick shakes and cold coffee, with nothing poured from a packet.</p><h2>What we stand for</h2><div class="cards"><div class="card"><h3>100% fresh</h3><p>Fruit squeezed to order.</p></div><div class="card"><h3>Priced for students</h3><p>Great taste at pocket-friendly prices.</p></div><div class="card"><h3>Made your way</h3><p>Less sugar, no ice, extra fruit. Just ask.</p></div></div><p style="margin-top:24px"><a class="btn" href="#/menu">See the menu</a> <a class="btn ghost" href="#/contact">Find us</a></p></section>'},
+blog:function(){return '<section><h1 class="pg">From the juice corner</h1><p class="sub">Simple reads about what goes into your glass.</p>'+POSTS.map(function(p){return '<a class="post" href="#/blog-'+p.id+'"><time>'+p.d+'</time><div><h3>'+p.t+'</h3><p>'+p.s+'</p><p><b style="color:var(--ink)">Read the article →</b></p></div></a>'}).join("")+'</section>'},
+gallery:function(){var g=[["🥭","Fresh mangoes","#ffd27a"],["🍊","Oranges, ready to press","#ffb38a"],["🍉","Cold watermelon","#ff9fb0"],["🍓","Strawberry shakes","#ffc2d6"],["🥬","Green Glow","#c9e88a"],["☕","Cold coffee","#e3c9a8"]];
+return '<section><h1 class="pg">A taste of the counter</h1><p class="sub">Fresh fruit, cold glasses and the corner opposite Amity’s gate.</p><div class="gal">'+g.map(function(x){return '<div style="--c:'+x[2]+'"><span>'+x[0]+'</span>'+x[1]+'</div>'}).join("")+'</div></section>'},
+contact:function(){return '<section><h1 class="pg">Find us</h1><p class="sub" style="margin-bottom:20px">Walk up, grab a glass, stay a while.</p><div class="info"><div><b>Address</b>'+ADDR+'</div><div><b>Timings</b>'+HOURS+'</div><div><b>Call or WhatsApp</b><a href="tel:+91'+PHONE+'">'+PHONE+'</a></div></div><div class="acts"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+WA+'">Chat on WhatsApp</a><a class="btn ghost" target="_blank" rel="noopener" href="'+MAP+'">Get directions</a></div></section>'}};
+POSTS.forEach(function(p){V["blog-"+p.id]=function(){return '<section class="art"><p><a href="#/blog">← Back to blog</a></p><h1 class="pg">'+p.t+'</h1><p class="sub">A simple guide from Azad Juice Corner · '+p.d+'</p>'+p.b+'<p><a class="btn" href="#/menu">See our menu</a></p></section>'}});
+function fruit(i){FI=i;var f=FR[i];$("sun").style.background=f.c;$("emoji").textContent=f.e;$("fname").textContent=f.n;$("fnote").textContent=f.t;$("emoji").classList.add("pop");setTimeout(function(){$("emoji").classList.remove("pop")},300);
+ var b=$("picker").children;for(var k=0;k<b.length;k++)b[k].setAttribute("aria-pressed",k===i)}
+function route(){var h=(location.hash.replace("#/","")||"home"),f=V[h]?h:"home";$("view").innerHTML=V[f]();window.scrollTo(0,0);
+ var a=$("links").children;for(var k=0;k<a.length;k++){var on=a[k].getAttribute("href")==="#/"+(f.indexOf("blog-")===0?"blog":f);if(on)a[k].setAttribute("aria-current","page");else a[k].removeAttribute("aria-current")}
+ if(f==="home")fruit(FI)}
+function toast(t){var e=$("toast");e.textContent=t;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(function(){e.classList.remove("on")},1600)}
+function add(i,s,ice,note){var k=i+"|"+s+"|"+ice+"|"+note,f=cart.filter(function(x){return x.k===k})[0];if(f)f.q++;else cart.push({k:k,i:i,s:s,ice:ice,note:note,q:1});upd();toast(M[i].n+" added")}
+function upd(){var n=0,t=0,h="";cart.forEach(function(l,x){var m=M[l.i];n+=l.q;t+=l.q*m.p;
+ h+='<div class="line"><span>'+m.e+' '+m.n+'<br><small>'+l.s+' · '+l.ice+(l.note?' · '+l.note.replace(/</g,"&lt;"):'')+'</small></span><span class="q"><button data-c="'+x+'" data-d="-1" aria-label="Remove one">−</button> '+l.q+' <button data-c="'+x+'" data-d="1" aria-label="Add one">+</button></span></div>'});
+ $("count").textContent=n;$("total").textContent=CUR+t;$("lines").innerHTML=h||'<p style="color:var(--muted)">Your order is empty. Add a drink from the menu.</p>';$("send").disabled=!n;$("send").style.opacity=n?1:.5}
+document.addEventListener("click",function(e){var el=e.target.closest("[data-add],[data-f],[data-b],[data-s],[data-ice],[data-badd],[data-sur],[data-c]");if(!el)return;var d=el.dataset;
+ if(d.add!==undefined)add(+d.add,"Regular","Regular","");
+ else if(d.f!==undefined)fruit(+d.f);
+ else if(d.b!==undefined){B.i=+d.b;$("view").innerHTML=V.build()}
+ else if(d.s!==undefined){B.s=SG[+d.s];$("view").innerHTML=V.build()}
+ else if(d.ice!==undefined){B.ice=IC[+d.ice];$("view").innerHTML=V.build()}
+ else if(d.badd!==undefined&&B.i!==null){add(B.i,B.s,B.ice,B.note)}
+ else if(d.sur!==undefined){add(Math.floor(Math.random()*M.length),"Regular","Regular","")}
+ else if(d.c!==undefined){var l=cart[+d.c];l.q+=+d.d;if(l.q<1)cart.splice(+d.c,1);upd()}});
+document.addEventListener("input",function(e){if(e.target.id==="note")B.note=e.target.value});
+$("cartBtn").onclick=function(){upd();$("dlg").showModal()};$("close").onclick=function(){$("dlg").close()};
+$("send").onclick=function(){var nm=$("cname").value.trim(),t="Hi Azad Juice Corner, "+(nm?"this is "+nm+". ":"")+"I’d like to order:\n",tot=0;
+ cart.forEach(function(l){t+=l.q+" x "+M[l.i].n+" ("+l.s+", "+l.ice+(l.note?", "+l.note:"")+")\n";tot+=l.q*M[l.i].p});
+ window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(t+"Total: "+CUR+tot),"_blank")};
+$("yr").textContent=new Date().getFullYear();$("addr").textContent=ADDR;
+window.addEventListener("hashchange",route);route();upd();
+</script>
+</body>
+</html>
